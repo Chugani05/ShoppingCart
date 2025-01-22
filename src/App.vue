@@ -1,12 +1,116 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
+import type { Book } from './components/books';
+
+const booksData: Book[] = [
+  {
+    id: 1,
+    title: "Icebreaker",
+    author: "Hannah Grace",
+    genre: "Romance",
+    description: "A figure skater and a hockey player are forced to share a rink, leading to sparks flying both on and off the ice.",
+    rating: 4.6,
+    quantity: 10,
+    price: 15.99,
+    image: "imgs/icebreaker.jpg"
+  },
+  {
+    id: 2,
+    title: "Wildfire",
+    author: "Hannah Grace",
+    genre: "Romance",
+    description: "A heartwarming and fiery romance about navigating love and second chances in unexpected places.",
+    rating: 4.8,
+    quantity: 10,
+    price: 16.99,
+    image: "imgs/wildfire.jpg"
+  },
+  {
+    id: 3,
+    title: "Daydream",
+    author: "Hannah Grace",
+    genre: "Romance",
+    description: "A dreamy tale of romance and ambition, where two souls find solace in each other amid life's chaos.",
+    rating: 4.7,
+    quantity: 8,
+    price: 15.99,
+    image: "imgs/daydream.jpd"
+  },
+  {
+    id: 4,
+    title: "Flawless",
+    author: "Elsie Silver",
+    genre: "Romance",
+    description: "A bull rider and his feisty publicist must team up, but their growing connection threatens to upend everything.",
+    rating: 4.5,
+    quantity: 8,
+    price: 14.99,
+    image: "imgs/flawless.jpg"
+  },
+  {
+    id: 5,
+    title: "Heartless",
+    author: "Elsie Silver",
+    genre: "Romance",
+    description: "A single dad and a free-spirited nanny clash in this sweet and steamy tale of unexpected love.",
+    rating: 4.6,
+    quantity: 10,
+    price: 16.99,
+    image: "imgs/heartless.jpg"
+  },
+  {
+    id: 6,
+    title: "Powerless",
+    author: "Elsie Silver",
+    genre: "Romance",
+    description: "Friends-to-lovers romance about discovering the strength to love and be loved in return.",
+    rating: 4.7,
+    quantity: 9,
+    price: 17.99,
+    image: "imgs/powerless.jpg"
+  },
+  {
+    id: 7,
+    title: "Reckless",
+    author: "Elsie Silver",
+    genre: "Romance",
+    description: "An enemies-to-lovers romance set in the charming small town of Chestnut Springs.",
+    rating: 4.8,
+    quantity: 7,
+    price: 18.99,
+    image: "imgs/reckless.jpg"
+  },
+  {
+    id: 8,
+    title: "Hopeless",
+    author: "Elsie Silver",
+    genre: "Romance",
+    description: "A gripping and emotional romance about finding love amidst brokenness and starting over.",
+    rating: 4.9,
+    quantity: 6,
+    price: 19.99,
+    image: "imgs/hopeless.jpg"
+  },
+  {
+    id: 8,
+    title: "On the Line",
+    author: "Naomi Loud",
+    genre: "Romance",
+    description: "A sizzling romance where love and ambition collide as two passionate individuals fight for their dreams.",
+    rating: 4.5,
+    quantity: 10,
+    price: 15.49,
+    image: "imgs/on-the-line.jpg"
+  }
+]
 </script>
 
 <template>
   <header>
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-      </nav>
+    <nav>
+      <RouterLink to="/shop">Shop</RouterLink>
+      <RouterLink to="/cart">Cart</RouterLink>
+    </nav>
   </header>
 
   <RouterView />
