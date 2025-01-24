@@ -15,7 +15,7 @@ const prop = defineProps(['title', 'author', 'genre', 'description', 'rating', '
             <strong>Price:</strong> {{ price }}€
         </p>
         <div class="d-flex justify-content-end">
-            <a href="#" class="btn btn-primary">Buy Now</a>
+            <a href="#" class="btn btn-primary">Add to Cart</a>
         </div>
     </div>
   </div>
