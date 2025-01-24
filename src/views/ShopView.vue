@@ -18,8 +18,8 @@ onMounted(async () => {
 
 <template>
   <div class="shop-container">
-    <h1 class="text-center mb-4">Shop</h1>
-    
+    <h1 class="text-center mb-4">Book Haven</h1>
+
     <div class="book-grid d-flex flex-wrap gap-3 justify-content-center">
       <BookItem
         v-for="(book, index) in books"
@@ -38,7 +38,9 @@ onMounted(async () => {
 
 <style scoped>
 .shop-container {
-  padding: 1rem;
+  margin-top: 2rem;
+  margin-right: 1rem;
+  margin-left: 6rem;
 }
 
 .book-grid {
@@ -50,23 +52,23 @@ onMounted(async () => {
 
 /* 3 columnas en pantallas grandes */
 .book-grid > * {
-  flex: 1 1 calc(33.33% - 1.5rem); 
+  flex: 1 1 calc(33.33% - 1.5rem);
   max-width: calc(33.33% - 1.5rem);
   min-width: 250px;
 }
 
 /* 2 columna en pantallas medianas */
-@media (max-width: 1150px) {
+@media (max-width: 1200px) {
   .book-grid > * {
-    flex: 1 1 calc(50% - 1rem); 
+    flex: 1 1 calc(50% - 1rem);
     max-width: calc(50% - 1rem);
   }
 }
 
 /* 1 columna en pantallas pequeñas */
-@media (max-width: 750px) {
+@media (max-width: 850px) {
   .book-grid > * {
-    flex: 1 1 100%; 
+    flex: 1 1 100%;
     max-width: 100%;
   }
 }
