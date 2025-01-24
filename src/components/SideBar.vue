@@ -13,45 +13,47 @@
     >
       <i class="bi bi-book fs-3"></i>
     </RouterLink>
-    <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
-      <li class="nav-item">
-        <RouterLink
-          to="/home"
-          class="nav-link py-3 border-bottom rounded-0"
-          aria-current="page"
-          data-bs-toggle="tooltip"
-          data-bs-placement="right"
-          aria-label="Home"
-          data-bs-original-title="Home"
-        >
-          <i class="bi bi-house fs-4"></i>
-        </RouterLink>
-      </li>
-      <li>
-        <RouterLink
-          to="/shop"
-          class="nav-link py-3 border-bottom rounded-0"
-          data-bs-toggle="tooltip"
-          data-bs-placement="right"
-          aria-label="Shop"
-          data-bs-original-title="Shop"
-        >
-          <i class="bi bi-shop fs-4"></i>
-        </RouterLink>
-      </li>
-      <li>
-        <RouterLink
-          to="/cart"
-          class="nav-link py-3 border-bottom rounded-0"
-          data-bs-toggle="tooltip"
-          data-bs-placement="right"
-          aria-label="Cart"
-          data-bs-original-title="Cart"
-        >
-          <i class="bi bi-cart2 fs-4"></i>
-        </RouterLink>
-      </li>
-    </ul>
+    <div class="icon-background">
+      <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+        <li class="nav-item">
+          <RouterLink
+            to="/home"
+            class="nav-link py-3 border-bottom rounded-0"
+            aria-current="page"
+            data-bs-toggle="tooltip"
+            data-bs-placement="right"
+            aria-label="Home"
+            data-bs-original-title="Home"
+          >
+            <i class="bi bi-house fs-4"></i>
+          </RouterLink>
+        </li>
+        <li>
+          <RouterLink
+            to="/shop"
+            class="nav-link py-3 border-bottom rounded-0"
+            data-bs-toggle="tooltip"
+            data-bs-placement="right"
+            aria-label="Shop"
+            data-bs-original-title="Shop"
+          >
+            <i class="bi bi-shop fs-4"></i>
+          </RouterLink>
+        </li>
+        <li>
+          <RouterLink
+            to="/cart"
+            class="nav-link py-3 border-bottom rounded-0"
+            data-bs-toggle="tooltip"
+            data-bs-placement="right"
+            aria-label="Cart"
+            data-bs-original-title="Cart"
+          >
+            <i class="bi bi-cart2 fs-4"></i>
+          </RouterLink>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -71,12 +73,16 @@
     background-color 0.2s;
 }
 
-.nav-link.active {
+.nav-link:hover {
+  color: #0d6efd;
+}
+
+.icon-background .router-link-active {
   color: #fff;
   background-color: #0d6efd;
 }
 
-.nav-link:hover {
-  color: #0d6efd;
+.icon-background .router-link-active:hover {
+  color: #1f2122;
 }
 </style>

@@ -18,7 +18,7 @@ onMounted(async () => {
 
 <template>
   <div class="shop-container">
-    <h1 class="text-center mb-4">Book Haven</h1>
+    <h1 class="text-center mb-4">Book Heaven</h1>
 
     <div class="book-grid d-flex flex-wrap gap-3 justify-content-center">
       <BookItem

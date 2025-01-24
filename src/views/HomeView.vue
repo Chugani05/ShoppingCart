@@ -1,7 +1,7 @@
 <template>
   <div>
     <section class="welcome-section text-center">
-      <h1 class="display-4 mb-3">Welcome to Book Haven</h1>
+      <h1 class="display-4 mb-3">Welcome to Book Heaven</h1>
       <p class="lead mb-4">
         Dive into a world of stories. Explore our wide collection of books across all genres and
         find your next great read.
