@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import BookItem from '@/components/BookItem.vue'
 import type { Book } from '@/components/classes/Book'
 import { onMounted, ref } from 'vue'
 
@@ -18,5 +19,14 @@ onMounted(async () => {
 <template>
   <h1>Shop</h1>
 
-  {{ books }}
+  <BookItem
+    v-for="book in books"
+    :title="book.title"
+    :author="book.author"
+    :genre="book.genre"
+    :description="book.description"
+    :rating="book.rating"
+    :price="book.price"
+    :image="book.image"
+  />
 </template>
