@@ -29,8 +29,8 @@ const prop = defineProps(['title', 'author', 'genre', 'description', 'rating', '
 }
 
 .card-img {
-  width: 150px;
-  height: 250px;
+  width: 180px;
+  height: 280px;
   object-fit: cover;
   border-radius: 8px;
   margin-right: 1rem;
