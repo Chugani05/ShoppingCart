@@ -1,28 +1,32 @@
 import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
-import type { Book } from '@/components/classes/Book'
+import type { CartItem } from '@/components/classes/Book'
 
 const useCartStore = defineStore('cart', () => {
-  const books = ref<Book[]>([])
+  const books = ref<CartItem[]>([])
 
   const totalPrice = computed(() => {
     let result = 0
     books.value.forEach((book) => {
-      result += book.price * book.quantity
+      result += book.price * book.units
     })
     return result
   })
 
-  function addBook(book: Book) {
+  function addBook(book: CartItem) {
     books.value.push(book)
   }
 
   function deleteBook(id: number) {
-
+    books.value = books.value.filter((book: CartItem) => book.id !== id)
   }
 
-  function updateQuantity(id: number, quantity: number) {
+  function updateQuantity(id: number, units: number) {
+    const index = books.value.findIndex((book: CartItem) => book.id === id)
 
+    if (index > -1) {
+      books.value[index].units = units
+    }
   }
 
   function emptyCart() {
