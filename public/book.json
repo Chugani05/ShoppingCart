@@ -6,7 +6,7 @@
     "genre": "Romance",
     "description": "A figure skater and a hockey player are forced to share a rink, leading to sparks flying both on and off the ice.",
     "rating": 4.6,
-    "quantity": 10,
+    "stock": 0,
     "price": 15.99,
     "image": "imgs/icebreaker.jpg"
   },
@@ -17,7 +17,7 @@
     "genre": "Romance",
     "description": "A heartwarming and fiery romance about navigating love and second chances in unexpected places.",
     "rating": 4.8,
-    "quantity": 10,
+    "stock": 10,
     "price": 16.99,
     "image": "imgs/wildfire.jpg"
   },
@@ -28,7 +28,7 @@
     "genre": "Romance",
     "description": "A dreamy tale of romance and ambition, where two souls find solace in each other amid life's chaos.",
     "rating": 4.7,
-    "quantity": 8,
+    "stock": 8,
     "price": 15.99,
     "image": "imgs/daydream.jpg"
   },
@@ -39,7 +39,7 @@
     "genre": "Romance",
     "description": "A charming rom-com about a high school senior who finds herself falling for her childhood crush, with a bit of movie magic and a whole lot of heart.",
     "rating": 4.6,
-    "quantity": 9,
+    "stock": 9,
     "price": 15.99,
     "image": "imgs/better-than-the-movies.jpg"
   },
@@ -50,7 +50,7 @@
     "genre": "Romance",
     "description": "A bull rider and his feisty publicist must team up, but their growing connection threatens to upend everything.",
     "rating": 4.5,
-    "quantity": 8,
+    "stock": 8,
     "price": 14.99,
     "image": "imgs/flawless.jpg"
   },
@@ -61,7 +61,7 @@
     "genre": "Romance",
     "description": "A single dad and a free-spirited nanny clash in this sweet and steamy tale of unexpected love.",
     "rating": 4.6,
-    "quantity": 10,
+    "stock": 10,
     "price": 16.99,
     "image": "imgs/heartless.jpg"
   },
@@ -72,7 +72,7 @@
     "genre": "Romance",
     "description": "Friends-to-lovers romance about discovering the strength to love and be loved in return.",
     "rating": 4.7,
-    "quantity": 9,
+    "stock": 19,
     "price": 17.99,
     "image": "imgs/powerless.jpg"
   },
@@ -83,7 +83,7 @@
     "genre": "Romance",
     "description": "An enemies-to-lovers romance set in the charming small town of Chestnut Springs.",
     "rating": 4.8,
-    "quantity": 7,
+    "stock": 7,
     "price": 18.99,
     "image": "imgs/reckless.jpg"
   },
@@ -94,7 +94,7 @@
     "genre": "Romance",
     "description": "A gripping and emotional romance about finding love amidst brokenness and starting over.",
     "rating": 4.9,
-    "quantity": 6,
+    "stock": 6,
     "price": 19.99,
     "image": "imgs/hopeless.jpg"
   },
@@ -105,7 +105,7 @@
     "genre": "Romance",
     "description": "A sizzling romance where love and ambition collide as two passionate individuals fight for their dreams.",
     "rating": 4.5,
-    "quantity": 10,
+    "stock": 10,
     "price": 15.49,
     "image": "imgs/on-the-line.jpg"
   },
@@ -116,7 +116,7 @@
     "genre": "Romance",
     "description": "A STEM-themed romance where a fake relationship turns into something real, filled with scientific humor and heartfelt moments.",
     "rating": 4.7,
-    "quantity": 10,
+    "stock": 10,
     "price": 16.99,
     "image": "imgs/the-love-hypothesis.jpg"
   },
@@ -127,7 +127,7 @@
     "genre": "Romance",
     "description": "A quirky romance about a neuroscientist who finds herself in an unlikely partnership with a brilliant, but frustrating colleague.",
     "rating": 4.6,
-    "quantity": 8,
+    "stock": 0,
     "price": 17.99,
     "image": "imgs/love-on-the-brain.jpg"
   },
@@ -138,7 +138,7 @@
     "genre": "Romance",
     "description": "A smart and quirky romance between a theoretical physicist and a scientist, where love and science collide in an unexpected and charming way.",
     "rating": 4.7,
-    "quantity": 8,
+    "stock": 18,
     "price": 16.99,
     "image": "imgs/love-theoretically.jpg"
   },  
@@ -149,7 +149,7 @@
     "genre": "Romance, LGBTQ+",
     "description": "A sweet and funny romance between the First Son of the United States and a British prince, navigating politics, family dynamics, and their secret love affair.",
     "rating": 4.7,
-    "quantity": 12,
+    "stock": 12,
     "price": 18.49,
     "image": "imgs/red-white-royal-blue.jpg"
   },
@@ -160,7 +160,7 @@
     "genre": "Romance",
     "description": "A heartfelt romance between two scientists who navigate their own personal struggles while developing an unexpected attraction to each other.",
     "rating": 4.7,
-    "quantity": 8,
+    "stock": 8,
     "price": 16.99,
     "image": "imgs/not-in-love.jpg"
   },
@@ -171,7 +171,7 @@
     "genre": "Fantasy, Romance",
     "description": "A magical tale set in a traveling carnival, where two sisters become entwined in a high-stakes game full of mystery, danger, and romance.",
     "rating": 4.4,
-    "quantity": 10,
+    "stock": 10,
     "price": 17.99,
     "image": "imgs/caraval.jpg"
   },
@@ -182,7 +182,7 @@
     "genre": "Fantasy, Romance",
     "description": "The second book in the Caraval series, where Tella must navigate a dangerous game of deception and magic, with stakes higher than ever before.",
     "rating": 4.5,
-    "quantity": 8,
+    "stock": 8,
     "price": 18.99,
     "image": "imgs/legendary.jpg"
   },
@@ -193,7 +193,7 @@
     "genre": "Fantasy, Romance",
     "description": "The thrilling conclusion to the Caraval trilogy, where the characters must confront their fates and decide who they can trust in a world filled with illusions.",
     "rating": 4.6,
-    "quantity": 7,
+    "stock": 7,
     "price": 19.49,
     "image": "imgs/finale.jpg"
   },
@@ -204,7 +204,7 @@
     "genre": "Fantasy, Romance",
     "description": "A prequel to the *Caraval* series, delving into the origins of the game and the mysterious legend of the enigmatic *Master of Caraval*.",
     "rating": 4.4,
-    "quantity": 6,
+    "stock": 16,
     "price": 17.99,
     "image": "imgs/spectacular.jpg"
   }

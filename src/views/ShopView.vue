@@ -31,6 +31,7 @@ onMounted(async () => {
         :rating="book.rating"
         :price="book.price"
         :image="book.image"
+        :stock="book.stock"
       />
     </div>
   </div>

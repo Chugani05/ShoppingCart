@@ -1,5 +1,44 @@
 <script setup lang="ts">
-const prop = defineProps(['title', 'author', 'genre', 'description', 'rating', 'price', 'image'])
+import { ref } from 'vue'
+import { useCart } from '@/composables/useCart'
+const prop = defineProps([
+  'title',
+  'author',
+  'genre',
+  'description',
+  'rating',
+  'price',
+  'image',
+  'stock',
+])
+const composable = useCart()
+const selected = ref(false)
+const quantity = ref(1)
+
+function decreaseQuantity() {
+  if (quantity.value > 1) {
+    quantity.value--
+  }
+}
+
+function increaseQuantity() {
+  if (quantity.value < prop.stock) {
+    quantity.value++
+  }
+}
+
+function addToCart() {
+  selected.value = false
+  const item = composable.toCartItem(
+    prop.id,
+    prop.title,
+    prop.author,
+    prop.price,
+    quantity.value,
+    prop.image,
+  )
+  composable.addBook(item)
+}
 </script>
 
 <template>
@@ -14,8 +53,28 @@ const prop = defineProps(['title', 'author', 'genre', 'description', 'rating', '
         <strong>Rating:</strong> {{ rating }} ⭐ <br />
         <strong>Price:</strong> {{ price }}€
       </p>
-      <div class="d-flex justify-content-end">
-        <a href="#" class="btn btn-primary">Add to Cart</a>
+
+      <div
+        class="d-flex justify-content-end align-items-center quantity-container"
+        v-if="stock > 0"
+      >
+        <div v-if="!selected">
+          <button class="btn btn-primary" @click="selected = true">Add to Cart</button>
+        </div>
+        <div v-else class="quantity-selector d-flex align-items-center">
+          <button class="btn decrement-btn" @click="decreaseQuantity">−</button>
+          <div class="quantity-display mx-2">{{ quantity }}</div>
+          <button class="btn increment-btn" @click="increaseQuantity">+</button>
+          <button class="btn btn-success confirm-btn ms-3" @click="addToCart">
+            <i class="bi bi-check"></i>
+          </button>
+          <button class="btn btn-danger ms-2" @click="selected = false">
+            <i class="bi bi-x"></i>
+          </button>
+        </div>
+      </div>
+      <div v-else>
+        <p>Not in stock</p>
       </div>
     </div>
   </div>

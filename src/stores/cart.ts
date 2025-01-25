@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
 import type { CartItem } from '@/components/classes/Book'
 
-const useCartStore = defineStore('cart', () => {
+export const useCartStore = defineStore('cart', () => {
   const books = ref<CartItem[]>([])
 
   const totalPrice = computed(() => {
@@ -33,4 +33,12 @@ const useCartStore = defineStore('cart', () => {
     books.value = []
   }
 
+  return {
+    books,
+    totalPrice,
+    addBook,
+    deleteBook,
+    updateQuantity,
+    emptyCart,
+  }
 })
