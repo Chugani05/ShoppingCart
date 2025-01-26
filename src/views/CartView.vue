@@ -58,7 +58,9 @@ const composable = useCart()
             </div>
             <button class="btn btn-success w-100 mt-3">Proceed to Checkout</button>
             <p class="text-center mt-4">-o-</p>
-            <button class="btn btn-danger w-100 mt-2" @click="composable.emptyCart">Empty Cart</button>
+            <button class="btn btn-danger w-100 mt-2" @click="composable.emptyCart">
+              Empty Cart
+            </button>
           </div>
         </div>
       </div>

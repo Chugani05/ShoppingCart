@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { useCart } from '@/composables/useCart';
+import { useCart } from '@/composables/useCart'
 import { ref } from 'vue'
 
-const prop = defineProps(['id','title', 'author', 'price', 'image', 'units'])
+const prop = defineProps(['id', 'title', 'author', 'price', 'image', 'units'])
 
 const composable = useCart()
 const units = ref(prop.units)
@@ -16,8 +16,8 @@ function decreaseQuantity() {
 }
 
 function increaseQuantity() {
-    units.value++
-    composable.updateQuantity(prop.id, units.value)
+  units.value++
+  composable.updateQuantity(prop.id, units.value)
 }
 </script>
 

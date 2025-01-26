@@ -50,7 +50,7 @@ export function useCart() {
   function emptyCart() {
     store.emptyCart()
   }
-  
+
   function calculateSubtotal() {
     return store.totalPrice
   }
@@ -72,6 +72,6 @@ export function useCart() {
     updateQuantity,
     calculateSubtotal,
     calculateIGIC,
-    calculateTotal
+    calculateTotal,
   }
 }
