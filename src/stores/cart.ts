@@ -21,11 +21,15 @@ export const useCartStore = defineStore('cart', () => {
     books.value = books.value.filter((book: CartItem) => book.id !== id)
   }
 
-  function updateQuantity(id: number, units: number) {
+  function updateQuantity(id: number, units: number, sum: boolean = false) {
     const index = books.value.findIndex((book: CartItem) => book.id === id)
 
     if (index > -1) {
-      books.value[index].units = units
+      if (sum) {
+        books.value[index].units += units
+      } else {
+        books.value[index].units = units
+      }
     }
   }
 

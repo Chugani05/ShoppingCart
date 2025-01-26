@@ -30,6 +30,13 @@ export function useCart() {
 
   function addBook(item: CartItem) {
     console.log(item)
+    const index = store.books.findIndex((book: CartItem) => book.id === item.id)
+
+    if (index > -1) {
+      store.updateQuantity(item.id, item.units, true)
+    } else {
+      store.addBook(item)
+    }
   }
 
   function deleteBook() {}

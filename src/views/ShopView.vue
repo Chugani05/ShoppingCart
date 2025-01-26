@@ -1,19 +1,9 @@
 <script setup lang="ts">
 import BookItem from '@/components/BookItem.vue'
 import type { Book } from '@/components/classes/Book'
-import { onMounted, ref } from 'vue'
+import { inject } from 'vue'
 
-const books = ref<Book[] | null>(null)
-
-async function getBooksData() {
-  const response = await fetch('book.json')
-  const data = await response.json()
-  return data
-}
-
-onMounted(async () => {
-  books.value = await getBooksData()
-})
+const books = inject<Book[]>('books')
 </script>
 
 <template>
@@ -24,6 +14,7 @@ onMounted(async () => {
       <BookItem
         v-for="(book, index) in books"
         :key="index"
+        :id="book.id"
         :title="book.title"
         :author="book.author"
         :genre="book.genre"
