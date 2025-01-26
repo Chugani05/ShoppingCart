@@ -37,6 +37,7 @@ function addToCart() {
     prop.price,
     quantity.value,
     prop.image,
+    prop.stock,
   )
   composable.addBook(item)
 }
@@ -76,7 +77,7 @@ function addToCart() {
         </div>
       </div>
       <div v-else>
-        <p>Not in stock</p>
+        <span class="badge text-bg-info">Not in stock</span>
       </div>
     </div>
   </div>

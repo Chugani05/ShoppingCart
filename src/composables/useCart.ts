@@ -1,7 +1,6 @@
 import { useCartStore } from '@/stores/cart'
-import type { Book, CartItem } from '@/components/classes/Book'
+import type { CartItem } from '@/components/classes/Book'
 import { reactive } from 'vue'
-import BookItem from '@/components/BookItem.vue'
 
 export function useCart() {
   const store = useCartStore()
@@ -13,6 +12,7 @@ export function useCart() {
     price: number,
     units: number,
     image: string,
+    stock: number,
   ): CartItem {
     return reactive({
       id: id,
@@ -39,13 +39,39 @@ export function useCart() {
     }
   }
 
-  function deleteBook() {}
-  function updateQuantity() {}
-  function emptyCart() {}
+  function deleteBook(id: number) {
+    store.deleteBook(id)
+  }
+
+  function updateQuantity(id: number, units: number) {
+    store.updateQuantity(id, units)
+  }
+
+  function emptyCart() {
+    store.emptyCart()
+  }
+  
+  function calculateSubtotal() {
+    return store.totalPrice
+  }
+
+  function calculateIGIC() {
+    return calculateSubtotal() * 0.07
+  }
+
+  function calculateTotal() {
+    return calculateSubtotal() + calculateIGIC()
+  }
 
   return {
     toCartItem,
     getBooks,
     addBook,
+    emptyCart,
+    deleteBook,
+    updateQuantity,
+    calculateSubtotal,
+    calculateIGIC,
+    calculateTotal
   }
 }
