@@ -29,7 +29,7 @@ function increaseQuantity() {
       </button>
     </td>
     <td>
-      <img :src="image" :alt="title + ' image'" class="item-image me-2" />
+      <img :src="image" :alt="title + ' cover'" class="item-image me-2" />
     </td>
     <td>{{ title }}</td>
     <td>{{ author }}</td>
